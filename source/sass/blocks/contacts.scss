@@ -1,0 +1,17 @@
+.contacts {
+  padding: 20px;
+  background-color: $grey-blocks-background;
+}
+
+.contacts__social-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $grey-social-border;
+  border-bottom: 1px solid $grey-social-border;
+  list-style: none;
+}
+
+.contacts__copyright-text {
+  font-size: 16px;
+  color: $grey-text;
+}

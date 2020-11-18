@@ -1,0 +1,56 @@
+.live-example {
+  margin-bottom: 10px;
+  background-color: $grey-section-background;
+}
+
+.live-example__title {
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.live-example__description {
+  color: $grey-text;
+}
+
+.live-example__weight,
+.live-example__day {
+  border: 1px solid $grey-border;
+}
+
+.live-example__weight-top,
+.live-example__day-top {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.live-example__weight-bottom,
+.live-example__day-bottom {
+  font-size: 12px;
+  line-height: 12px;
+  color: $grey-text;
+}
+
+.live-example__food-cost {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.live-example__slider-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.live-example__slider-form {
+  label {
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+}
