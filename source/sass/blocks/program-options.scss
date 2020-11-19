@@ -1,3 +1,10 @@
 .program-options {
-  color: $black;
+  border: none;
+  border-bottom: 1px solid $grey-social-border;
+}
+
+.program-options__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
