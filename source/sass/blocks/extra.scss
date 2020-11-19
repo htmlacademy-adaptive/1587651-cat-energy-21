@@ -1,3 +1,10 @@
 .extra {
-  color: $black;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.extra__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
