@@ -1,3 +1,15 @@
-.catalog-item {
-  color: $black;
+.catalog-item__title {
+  font-family: $oswald;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $grey-title;
+}
+
+.catalog-item__table {
+  td {
+    font-size: 12px;
+    line-height: 16px;
+    color: $grey-text;
+  }
 }
