@@ -19,19 +19,21 @@
   font-size: 16px;
   text-transform: uppercase;
   color: $grey-text;
-    input::placeholder,
-    textarea::placeholder {
-      font-family: $oswald;
-      font-size: 16px;
-      text-transform: uppercase;
-      color: $grey-text;
-    }
-    legend {
-      font-family: $oswald;
-      font-size: 24px;
-      line-height: 26px;
-      color: $black;
-    }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-family: $oswald;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $grey-text;
+  }
+
+  legend {
+    font-family: $oswald;
+    font-size: 24px;
+    line-height: 26px;
+    color: $black;
+  }
 }
 
 .program-selection__legend {
