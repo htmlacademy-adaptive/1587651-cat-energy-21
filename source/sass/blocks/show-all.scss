@@ -1,3 +1,14 @@
-.show-all {
-  color: $black;
+.show-all__title {
+  margin: 0;
+  font-family: $oswald;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.show-all__subtitle {
+  font-family: $oswald;
+  font-size: 12px;
+  line-height: 16px;
+  color: $grey-text;
 }

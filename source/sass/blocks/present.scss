@@ -1,3 +1,10 @@
-.present {
-  color: $black;
+.present__container {
+  background-color: $green;
+}
+
+.present__desctiption {
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
 }
