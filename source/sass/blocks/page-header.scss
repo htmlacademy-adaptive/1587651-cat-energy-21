@@ -1,3 +1,45 @@
 .page-header {
-  margin-bottom: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 66px;
+
+  @media (min-width: $tablet) {
+    min-height: 100px;
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 140px;
+  }
+}
+
+.page-header__logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &-img {
+    margin-top: -3px;
+    margin-right: 56px;
+  }
+
+  @media (min-width: $tablet) {
+    &-img {
+      width: 174px;
+      height: 52px;
+      margin-top: 3px;
+    }
+
+    &-text {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &-img {
+      margin-top: 28px;
+      width: 202px;
+      height: 59px;
+    }
+  }
 }

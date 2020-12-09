@@ -1,9 +1,58 @@
+.main-nav {
+  position: relative;
+}
+
+.main-nav__burger {
+  position: absolute;
+  display: block;
+  top: -10px;
+  right: 0;
+  width: 24px;
+  height: 16px;
+  background-color: $white;
+  border: none;
+  cursor: pointer;
+}
+
+.main-nav--closed .main-nav__burger {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: $black;
+    box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
+  }
+}
+
+.main-nav--opened .main-nav__burger {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 25px;
+    height: 1px;
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
 .main-nav__list {
   display: none;
   margin: 0;
   padding: 0;
   font-family: $oswald;
-  font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
@@ -11,10 +60,70 @@
 }
 
 .main-nav__item {
+  padding: 20px 0;
   text-align: center;
   border-top: 1px solid $grey-menu-border;
 }
 
 .main-nav__link {
   color: $black;
+}
+
+@media (min-width: $tablet) {
+  .main-nav__burger {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 440px;
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .main-nav__item {
+    border-top: none;
+  }
+
+  .main-nav__item--active {
+    .main-nav__link {
+      padding-bottom: 8px;
+      border-bottom: 2px solid $green;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .main-nav__list {
+    width: 478px;
+    margin-top: 27px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .main-nav__item {
+    z-index: 1;
+  }
+
+  .main-nav__link {
+    color: $white;
+  }
+
+  .main-nav__link--inner {
+    color: $black;
+  }
+
+  .main-nav__item--active {
+    .main-nav__link {
+      padding-bottom: 5px;
+      border-bottom: 2px solid $white;
+    }
+
+    .main-nav__link--inner {
+      border-bottom: 2px solid $green;
+    }
+  }
 }

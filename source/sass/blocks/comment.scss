@@ -1,3 +1,68 @@
 .comment {
+  position: relative;
+  margin-bottom: 14px;
   border: none;
+
+  textarea {
+    margin-top: 10px;
+    padding: 5px 5px 8px 15px;
+    border: 1px solid $grey-input;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: 0;
+    width: 50%;
+    height: 2px;
+    background-color: $green;
+    z-index: -1;
+  }
+}
+
+@media (min-width: $tablet) {
+  .comment {
+    margin-bottom: 52px;
+
+    textarea {
+      width: 631px;
+      margin-top: 49px;
+      margin-left: 41px;
+      padding: 10px 18px 27px 18px;
+    }
+
+    &::before {
+      top: 30px;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .comment {
+    margin-bottom: 54px;
+
+    textarea {
+      width: 100%;
+      margin-top: 47px;
+      margin-left: 2px;
+    }
+
+    &::before {
+      width: 72%;
+      top: 28px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 28px;
+      left: 0;
+      width: 16%;
+      height: 2px;
+      background-color: $green;
+      z-index: -1;
+    }
+  }
 }

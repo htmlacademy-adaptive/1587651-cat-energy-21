@@ -1,7 +1,28 @@
+.additional-products {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 50%;
+    height: 2px;
+    background-color: $green;
+    z-index: -1;
+  }
+}
+
 .additional-products__title {
+  width: 248px;
+  margin-top: 25px;
+  margin-bottom: 35px;
   font-family: $oswald;
+  font-weight: normal;
   font-size: 24px;
   line-height: 24px;
+  background-color: $white;
+  z-index: 1;
 }
 
 .additional-products__list {
@@ -11,20 +32,295 @@
 }
 
 .additional-products__item {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "table"
+    "link";
+  margin-bottom: 17px;
   border-top: 1px solid $grey-border;
+
+  &:last-child {
+    padding-bottom: 17px;
+    border-bottom: 1px solid $grey-border;
+  }
 }
 
 .additional-products__item-title {
+  grid-area: title;
   margin: 0;
+  margin-top: 13px;
+  margin-left: 2px;
+  margin-bottom: 12px;
   font-family: $oswald;
+  font-weight: normal;
   font-size: 16px;
   line-height: 16px;
+  text-transform: uppercase;
   color: $grey-title;
 }
 
 .additional-products__item-table {
+  grid-area: table;
+  margin-bottom: 14px;
+  border-collapse: collapse;
+
   td {
     line-height: 14px;
     color: $grey-text;
+  }
+}
+
+.additional-products__item-table-left {
+  text-align: left;
+}
+
+.additional-products__item-table-right {
+  text-align: right;
+}
+
+.additional-products__link {
+  grid-area: link;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.additional-products__present-container {
+  position: relative;
+  width: 280px;
+  height: 289px;
+  margin-top: 39px;
+  margin-bottom: 35px;
+  background-color: $green;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 289px;
+    background-image: url("../../img/decor/gift-photo-mobile.jpg");
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 58px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78px;
+    height: 80px;
+    background-image: url("../../img/icons/gift-icon.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/decor/gift-photo-mobile@2x.jpg 2x");
+  }
+}
+
+.additional-products__present-desctiption {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 161px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+  z-index: 1;
+}
+
+@media (min-width: $tablet) {
+  .additional-products {
+    &::before {
+      top: 23px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 23px;
+      left: 0;
+      width: 50%;
+      height: 2px;
+      background-color: $green;
+      z-index: -1;
+    }
+  }
+
+  .additional-products__title {
+    width: 410px;
+    margin-top: -15px;
+    padding-left: 37px;
+    margin-bottom: 80px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .additional-products__item {
+    grid-template-areas:
+      "title table"
+      "link link";
+    margin-bottom: 0;
+    padding: 27px 37px;
+    border-top: 1px solid $grey-input-border;
+    border-left: 1px solid $grey-input-border;
+    border-right: 1px solid $grey-input-border;
+
+    &:last-child {
+      padding-bottom: 27px;
+      border-bottom: 1px solid $grey-input-border;
+    }
+  }
+
+  .additional-products__item-title {
+    margin: 0;
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additional-products__item-table {
+    margin-top: 2px;
+    justify-self: end;
+
+    td {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .additional-products__item-table-left {
+    padding-right: 48px;
+  }
+
+  .additional-products__item-table-left--liter {
+    padding-right: 55px;
+  }
+
+  .additional-products__present-container {
+    width: 708px;
+    height: 200px;
+    margin-top: 68px;
+    margin-bottom: 77px;
+
+    &::before {
+      width: 708px;
+      height: 200px;
+      background-image: url("../../img/decor/gift-photo-tablet.jpg");
+    }
+
+    &::after {
+      top: 50%;
+      left: 11%;
+      transform: translateY(-50%);
+      width: 80px;
+      height: 83px;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/decor/gift-photo-tablet@2x.jpg 2x");
+    }
+  }
+
+  .additional-products__present-desctiption {
+    bottom: 50px;
+    left: 71%;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop) {
+  .additional-products {
+    margin-bottom: 85px;
+
+    &::before {
+      width: 70%;
+    }
+
+    &::after {
+      width: 5%;
+    }
+  }
+
+  .additional-products__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .additional-products__title {
+    width: 372px;
+    margin-top: 12px;
+    padding-left: 0;
+  }
+
+  .additional-products__item {
+    grid-template-columns: 323px 328px 244px;
+    grid-template-areas: "title table link";
+    align-items: center;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    border: none;
+    border-top: 1px solid $grey-input-border;
+
+    &:last-child {
+      padding-bottom: 16px;
+    }
+  }
+
+  .additional-products__item-title {
+    margin: 0;
+  }
+
+  .additional-products__item-table {
+    width: 300px;
+    margin: 0;
+    margin-top: 6px;
+    justify-self: start;
+  }
+
+  .additional-products__item-table-right {
+    padding-right: 10px;
+  }
+
+  .additional-products__item-table-right--rubles {
+    padding-right: 20px;
+  }
+
+  .additional-products__present-container {
+    width: 245px;
+    height: 289px;
+    margin: 0;
+
+    &::before {
+      width: 245px;
+      height: 289px;
+      background-image: url("../../img/decor/gift-photo-desktop.jpg");
+    }
+
+    &::after {
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/decor/gift-photo-desktop@2x.jpg 2x");
+    }
+  }
+
+  .additional-products__present-desctiption {
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   }
 }

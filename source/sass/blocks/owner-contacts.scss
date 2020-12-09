@@ -1,3 +1,154 @@
 .owner-contacts {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 10px;
   border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 0;
+    width: 50%;
+    height: 2px;
+    background-color: $green;
+    z-index: -1;
+  }
+}
+
+.owner-contacts__email,
+.owner-contacts__number {
+  display: grid;
+  grid-template-columns: max-content auto;
+  align-items: center;
+  margin-bottom: 8px;
+
+  input {
+    width: 100%;
+    margin-top: 6px;
+    padding: 17px 15px 11px;
+    border: 1px solid $grey-input;
+  }
+}
+
+.owner-contacts__email {
+  label {
+    margin-right: 12px;
+  }
+
+  input {
+    background-image: url("../../img/icons/icon-email.svg");
+    background-repeat: no-repeat;
+    background-position: 94% 52%;
+  }
+}
+
+.owner-contacts__number {
+  label {
+    margin-right: 11px;
+  }
+
+  input {
+    background-image: url("../../img/icons/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 94% 53%;
+  }
+}
+
+@media (min-width: $tablet) {
+  .owner-contacts {
+    margin-bottom: 42px;
+
+    &::before {
+      top: 28px;
+      width: 100%;
+    }
+  }
+
+  .owner-contacts__email,
+  .owner-contacts__number {
+    margin-bottom: 14px;
+    padding-right: 35px;
+
+    input {
+      padding: 21px 19px 14px;
+    }
+  }
+
+  .owner-contacts__email {
+    margin-left: 42px;
+    margin-top: 70px;
+
+    label {
+      margin-right: 19px;
+    }
+
+    input {
+      background-position: 97% 49%;
+    }
+  }
+
+  .owner-contacts__number {
+    margin-left: 39px;
+
+    label {
+      margin-right: 16px;
+    }
+
+    input {
+      background-position: 97% 53%;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .owner-contacts {
+    margin-bottom: 60px;
+
+    &::before {
+      top: 28px;
+      width: 70%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 28px;
+      left: 0;
+      width: 16%;
+      height: 2px;
+      background-color: $green;
+      z-index: -1;
+    }
+  }
+
+  .owner-contacts__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+  }
+
+  .owner-contacts__email,
+  .owner-contacts__number {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .owner-contacts__email {
+    margin-left: 2px;
+    padding-right: 39px;
+
+    label {
+      margin-right: 21px;
+    }
+
+    input {
+      background-position: 96% 49%;
+    }
+  }
+
+  .owner-contacts__number {
+    padding-left: 39px;
+  }
 }

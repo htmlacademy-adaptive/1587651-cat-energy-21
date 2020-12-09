@@ -1,5 +1,8 @@
 .program-options {
+  margin-top: 10px;
+  padding-top: 29px;
   border: none;
+  border-top: 1px solid $grey-social-border;
   border-bottom: 1px solid $grey-social-border;
 }
 
@@ -7,4 +10,85 @@
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.program-options__item {
+  margin-left: 44px;
+  margin-bottom: 24px;
+}
+
+.program-options__input {
+  position: relative;
+
+  &:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -38px;
+    width: 14px;
+    height: 14px;
+    background-color: $green;
+    border-radius: 50%;
+  }
+}
+
+.program-options__label {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -46px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $grey-input-border;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: $tablet) {
+  .program-options {
+    margin-bottom: 69px;
+    border: none;
+  }
+
+  .program-options__list {
+    margin-left: 42px;
+    margin-right: 35px;
+    padding: 28px 35px 4px 39px;
+    border: 1px solid $grey-input;
+  }
+
+  .program-options__input {
+    &:checked + label::after {
+      top: 7px;
+      left: -49px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .program-options__label {
+    &::before {
+      top: -5px;
+      left: -60px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .program-options {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .program-options__list {
+    margin-left: 40px;
+    margin-right: 0;
+    padding: 29px 35px 4px 39px;
+  }
 }
