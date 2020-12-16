@@ -89,9 +89,9 @@
     content: "";
     position: absolute;
     top: 2px;
-    left: 100px;
-    width: 32px;
-    height: 10px;
+    width: 24px;
+    height: 12px;
+    margin-left: 16px;
     background-image: url("../../img/icons/arrow-icon.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -136,8 +136,8 @@
     line-height: 30px;
 
     &::after {
-      top: 10px;
-      left: 130px;
+      top: 8px;
+      margin-left: 25px;
     }
   }
 
@@ -203,8 +203,7 @@
 
   .food-options__link {
     &::after {
-      top: 9px;
-      left: 133px;
+      margin-left: 28px;
     }
   }
 
