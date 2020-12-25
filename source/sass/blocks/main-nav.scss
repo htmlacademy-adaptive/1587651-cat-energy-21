@@ -5,7 +5,7 @@
 .main-nav__burger {
   position: absolute;
   display: block;
-  top: -10px;
+  top: -12px;
   right: 0;
   width: 24px;
   height: 16px;
@@ -49,18 +49,28 @@
 }
 
 .main-nav__list {
-  display: none;
+  position: absolute;
+  top: 33px;
+  left: -300px;
+  width: 320px;
   margin: 0;
   padding: 0;
   font-family: $oswald;
+  font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+  background-color: $white;
   list-style: none;
+  z-index: 1;
+}
+
+.main-nav__list--closed {
+  display: none;
 }
 
 .main-nav__item {
-  padding: 20px 0;
+  padding: 22px 0 23px;
   text-align: center;
   border-top: 1px solid $grey-menu-border;
 }
@@ -75,13 +85,15 @@
   }
 
   .main-nav__list {
+    position: static;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 440px;
-    margin-top: 5px;
+    margin-top: 6px;
     font-size: 18px;
     line-height: 24px;
+    font-weight: normal;
   }
 
   .main-nav__item {
@@ -99,7 +111,7 @@
 @media (min-width: $desktop) {
   .main-nav__list {
     width: 478px;
-    margin-top: 27px;
+    margin-top: 28px;
     font-size: 20px;
     line-height: 30px;
   }
