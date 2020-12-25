@@ -6,12 +6,24 @@
   display: grid;
   grid-template-columns: max-content auto;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 
   input {
     width: 100%;
-    padding: 17px 15px 11px;
+    padding: 10px 15px;
     border: 1px solid $grey-input;
+  }
+
+  &:hover input {
+    border: 1px solid $grey-input-border;
+  }
+
+  &:focus-within input {
+    border: 2px solid $grey-text;
+  }
+
+  input:invalid {
+    border: 2px solid $error;
   }
 }
 
@@ -40,11 +52,12 @@
 
   .cat-info__item {
     margin-left: 42px;
-    margin-bottom: 19px;
+    margin-bottom: 18px;
     padding-right: 36px;
 
     input {
-      padding: 24px 19px 12px;
+      margin-top: 1px;
+      padding: 14px 19px 13px;
     }
   }
 

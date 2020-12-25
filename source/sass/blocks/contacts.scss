@@ -41,26 +41,37 @@
   margin-left: -2px;
 }
 
-.contacts__social-link--vkontakte,
-.contacts__social-link--instagramm {
-  &:hover path,
-  &:focus path {
+.contacts__social-link {
+  .contacts__social-vkontakte,
+  .contacts__social-instagramm {
+    fill: $social;
+  }
+
+  .contacts__social-facebook {
+    margin-right: 2px;
+    fill: transparent;
+    stroke: $social;
+  }
+
+  &:hover .contacts__social-vkontakte,
+  &:hover .contacts__social-instagramm,
+  &:focus .contacts__social-vkontakte,
+  &:focus .contacts__social-instagramm {
     fill: $green;
   }
 
-  &:active path {
-    fill: $green;
-    opacity: 0.3;
-  }
-}
-
-.contacts__social-link--facebook {
-  &:hover path,
-  &:focus path {
+  &:hover .contacts__social-facebook,
+  &:focus .contacts__social-facebook {
     stroke: $green;
   }
 
-  &:active path {
+  &:active .contacts__social-vkontakte,
+  &:active .contacts__social-instagramm {
+    fill: $green;
+    opacity: 0.3;
+  }
+
+  &:active .contacts__social-facebook {
     stroke: $green;
     opacity: 0.3;
   }
@@ -86,12 +97,16 @@
 .contacts__copyright-logo {
   margin-top: 6px;
 
-  &:hover path,
-  &:focus path {
+  svg {
+    fill: $social;
+  }
+
+  &:hover svg,
+  &:focus svg {
     fill: $green;
   }
 
-  &:active path {
+  &:active svg {
     fill: $green;
     opacity: 0.3;
   }
@@ -109,7 +124,7 @@
   }
 
   .contacts__social-list {
-    width: 129px;
+    width: 136px;
     margin: 0;
     margin-top: 1px;
     padding: 0;
@@ -121,27 +136,21 @@
     margin: 0;
   }
 
-  .contacts__social-link--vkontakte {
-    svg {
-      width: 30px;
-      height: 22px;
-    }
+  .contacts__social-vkontakte {
+    margin-left: 5px;
+    width: 30px;
+    height: 22px;
   }
 
-  .contacts__social-link--instagramm {
-    margin-left: 8px;
-
-    svg {
-      width: 23px;
-      height: 23px;
-    }
+  .contacts__social-instagramm {
+    margin-left: 5px;
+    width: 23px;
+    height: 23px;
   }
 
-  .contacts__social-link--facebook {
-    svg {
-      width: 28px;
-      height: 33px;
-    }
+  .contacts__social-facebook {
+    width: 30px;
+    height: 33px;
   }
 
   .contacts__copyright {

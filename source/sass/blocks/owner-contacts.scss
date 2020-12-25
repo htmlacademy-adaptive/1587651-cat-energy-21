@@ -21,13 +21,46 @@
   display: grid;
   grid-template-columns: max-content auto;
   align-items: center;
-  margin-bottom: 8px;
+  position: relative;
+  margin-bottom: 7px;
 
   input {
     width: 100%;
     margin-top: 6px;
-    padding: 17px 15px 11px;
+    padding: 10px 15px;
     border: 1px solid $grey-input;
+  }
+
+  svg {
+    position: absolute;
+  }
+
+  &:hover input {
+    border: 1px solid $grey-input-border;
+  }
+
+  &:focus-within input {
+    border: 2px solid $grey-text;
+  }
+
+  &:focus-within .owner-number-path {
+    fill: $green;
+  }
+
+  &:focus-within .owner-email-line {
+    stroke: $green;
+  }
+
+  input:invalid {
+    border: 2px solid $error;
+  }
+
+  input:invalid + svg .owner-number-path {
+    fill: $error;
+  }
+
+  input:invalid + svg .owner-email-line {
+    stroke: $error;
   }
 }
 
@@ -36,10 +69,9 @@
     margin-right: 12px;
   }
 
-  input {
-    background-image: url("../../img/icons/icon-email.svg");
-    background-repeat: no-repeat;
-    background-position: 94% 52%;
+  svg {
+    top: 24px;
+    left: 88%;
   }
 }
 
@@ -48,10 +80,9 @@
     margin-right: 11px;
   }
 
-  input {
-    background-image: url("../../img/icons/icon-phone.svg");
-    background-repeat: no-repeat;
-    background-position: 94% 53%;
+  svg {
+    top: 20px;
+    left: 89%;
   }
 }
 
@@ -71,7 +102,7 @@
     padding-right: 35px;
 
     input {
-      padding: 21px 19px 14px;
+      padding: 14px 19px 12px;
     }
   }
 
@@ -83,8 +114,8 @@
       margin-right: 19px;
     }
 
-    input {
-      background-position: 97% 49%;
+    svg {
+      left: 89%;
     }
   }
 
@@ -93,10 +124,6 @@
 
     label {
       margin-right: 16px;
-    }
-
-    input {
-      background-position: 97% 53%;
     }
   }
 }
@@ -143,12 +170,16 @@
       margin-right: 21px;
     }
 
-    input {
-      background-position: 96% 49%;
+    svg {
+      left: 87%;
     }
   }
 
   .owner-contacts__number {
     padding-left: 39px;
+
+    svg {
+      left: 94%;
+    }
   }
 }

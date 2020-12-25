@@ -13,13 +13,11 @@
 }
 
 .program-options__item {
-  margin-left: 44px;
+  margin-left: 47px;
   margin-bottom: 24px;
 }
 
 .program-options__input {
-  position: relative;
-
   &:checked + label::after {
     content: "";
     position: absolute;
@@ -29,6 +27,15 @@
     height: 14px;
     background-color: $green;
     border-radius: 50%;
+  }
+
+  &:disabled + label {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &:focus + label::before {
+    outline: thin dotted;
   }
 }
 
@@ -44,6 +51,11 @@
     height: 30px;
     border: 1px solid $grey-input-border;
     border-radius: 50%;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border: 1px solid $grey-input-hover;
   }
 }
 
