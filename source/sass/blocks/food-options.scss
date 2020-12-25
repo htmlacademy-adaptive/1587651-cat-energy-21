@@ -97,6 +97,17 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    width: 32px;
+    background-image: url("../../img/icons/arrow-icon-big.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet) {

@@ -11,6 +11,15 @@
 .contacts__logo {
   margin-top: 35px;
   margin-bottom: 28px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .contacts__social-list {
@@ -32,6 +41,31 @@
   margin-left: -2px;
 }
 
+.contacts__social-link--vkontakte,
+.contacts__social-link--instagramm {
+  &:hover path,
+  &:focus path {
+    fill: $green;
+  }
+
+  &:active path {
+    fill: $green;
+    opacity: 0.3;
+  }
+}
+
+.contacts__social-link--facebook {
+  &:hover path,
+  &:focus path {
+    stroke: $green;
+  }
+
+  &:active path {
+    stroke: $green;
+    opacity: 0.3;
+  }
+}
+
 .contacts__copyright {
   display: flex;
   flex-wrap: wrap;
@@ -43,10 +77,24 @@
 .contacts__copyright-text {
   font-size: 16px;
   color: $grey-text;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.contacts__copyright-img {
+.contacts__copyright-logo {
   margin-top: 6px;
+
+  &:hover path,
+  &:focus path {
+    fill: $green;
+  }
+
+  &:active path {
+    fill: $green;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet) {
@@ -63,6 +111,7 @@
   .contacts__social-list {
     width: 129px;
     margin: 0;
+    margin-top: 1px;
     padding: 0;
     list-style: none;
     border: none;
@@ -72,22 +121,27 @@
     margin: 0;
   }
 
-  .social-img--vkontakte {
-    width: 30px;
-    height: 22px;
+  .contacts__social-link--vkontakte {
+    svg {
+      width: 30px;
+      height: 22px;
+    }
   }
 
-  .social-img--instagramm {
-    width: 23px;
-    height: 23px;
-    margin-top: 3px;
-    margin-left: 7px;
+  .contacts__social-link--instagramm {
+    margin-left: 8px;
+
+    svg {
+      width: 23px;
+      height: 23px;
+    }
   }
 
-  .social-img--facebook {
-    width: 28px;
-    height: 33px;
-    margin-top: -1px;
+  .contacts__social-link--facebook {
+    svg {
+      width: 28px;
+      height: 33px;
+    }
   }
 
   .contacts__copyright {
