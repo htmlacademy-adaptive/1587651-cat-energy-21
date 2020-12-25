@@ -16,6 +16,15 @@
   }
 }
 
+.owner-email-icon {
+  fill: transparent;
+  stroke: $grey-title;
+}
+
+.owner-number-icon {
+  fill: $grey-title;
+}
+
 .owner-contacts__email,
 .owner-contacts__number {
   display: grid;
@@ -43,11 +52,11 @@
     border: 2px solid $grey-text;
   }
 
-  &:focus-within .owner-number-path {
+  &:focus-within .owner-number-icon {
     fill: $green;
   }
 
-  &:focus-within .owner-email-line {
+  &:focus-within .owner-email-icon {
     stroke: $green;
   }
 
@@ -55,11 +64,11 @@
     border: 2px solid $error;
   }
 
-  input:invalid + svg .owner-number-path {
+  input:invalid + .owner-number-icon {
     fill: $error;
   }
 
-  input:invalid + svg .owner-email-line {
+  input:invalid + .owner-email-icon {
     stroke: $error;
   }
 }
