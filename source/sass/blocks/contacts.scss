@@ -59,10 +59,7 @@
     .contacts__social-instagramm {
       fill: $green;
     }
-  }
 
-  &:hover,
-  &:focus {
     .contacts__social-facebook {
       stroke: $green;
     }
@@ -74,9 +71,7 @@
       fill: $green;
       opacity: 0.3;
     }
-  }
 
-  &:active {
     .contacts__social-facebook {
       stroke: $green;
       opacity: 0.3;
