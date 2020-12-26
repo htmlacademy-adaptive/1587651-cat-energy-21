@@ -11,6 +11,15 @@
 .contacts__logo {
   margin-top: 35px;
   margin-bottom: 28px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .contacts__social-list {
@@ -32,6 +41,44 @@
   margin-left: -2px;
 }
 
+.contacts__social-link {
+  .contacts__social-vkontakte,
+  .contacts__social-instagramm {
+    fill: $social;
+  }
+
+  .contacts__social-facebook {
+    margin-right: 2px;
+    fill: transparent;
+    stroke: $social;
+  }
+
+  &:hover,
+  &:focus {
+    .contacts__social-vkontakte,
+    .contacts__social-instagramm {
+      fill: $green;
+    }
+
+    .contacts__social-facebook {
+      stroke: $green;
+    }
+  }
+
+  &:active {
+    .contacts__social-vkontakte,
+    .contacts__social-instagramm {
+      fill: $green;
+      opacity: 0.3;
+    }
+
+    .contacts__social-facebook {
+      stroke: $green;
+      opacity: 0.3;
+    }
+  }
+}
+
 .contacts__copyright {
   display: flex;
   flex-wrap: wrap;
@@ -43,10 +90,32 @@
 .contacts__copyright-text {
   font-size: 16px;
   color: $grey-text;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.contacts__copyright-img {
+.contacts__copyright-logo {
   margin-top: 6px;
+
+  svg {
+    fill: $social;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $green;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: $green;
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: $tablet) {
@@ -61,8 +130,9 @@
   }
 
   .contacts__social-list {
-    width: 129px;
+    width: 136px;
     margin: 0;
+    margin-top: 1px;
     padding: 0;
     list-style: none;
     border: none;
@@ -72,22 +142,21 @@
     margin: 0;
   }
 
-  .social-img--vkontakte {
+  .contacts__social-vkontakte {
+    margin-left: 5px;
     width: 30px;
     height: 22px;
   }
 
-  .social-img--instagramm {
+  .contacts__social-instagramm {
+    margin-left: 5px;
     width: 23px;
     height: 23px;
-    margin-top: 3px;
-    margin-left: 7px;
   }
 
-  .social-img--facebook {
-    width: 28px;
+  .contacts__social-facebook {
+    width: 30px;
     height: 33px;
-    margin-top: -1px;
   }
 
   .contacts__copyright {

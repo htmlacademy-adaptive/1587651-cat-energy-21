@@ -5,6 +5,16 @@
   color: $white;
   background-color: $green;
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $green-active;
+  }
+
+  &:active {
+    background-color: $green-active;
+    color: $white-opacity;
+  }
 }
 
 .button-grey {
@@ -14,4 +24,14 @@
   color: $grey-text;
   background-color: $grey-blocks-background;
   border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $grey-stripes;
+  }
+
+  &:active {
+    background-color: $grey-stripes;
+    color: $grey-text-opacity;
+  }
 }

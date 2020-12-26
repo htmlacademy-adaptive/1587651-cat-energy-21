@@ -27,6 +27,8 @@
   text-transform: uppercase;
   color: $grey-text;
 
+  input,
+  textarea,
   input::placeholder,
   textarea::placeholder {
     font-family: $oswald;

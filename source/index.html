@@ -45,6 +45,12 @@
         <h2 class="promo__title">Функциональное<br> питание для котов</h2>
         <p class="promo__subtitle">Занялся собой? Займись котом!</p>
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/content/index-can-desktop.webp 1x, img/content/index-can-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/content/index-can-tablet.webp 1x, img/content/index-can-tablet@2x.webp 2x">
+          <source type="image/webp"
+            srcset="img/content/index-can-mobile.webp 1x, img/content/index-can-mobile@2x.webp 2x">
           <source media="(min-width: 1440px)"
             srcset="img/content/index-can-desktop.png 1x, img/content/index-can-desktop@2x.png 2x">
           <source media="(min-width: 768px)"
@@ -183,13 +189,10 @@
         </div>
       </div>
       <div class="partnership__img-container">
-        <picture>
-          <source media="(min-width: 1440px)"
-            srcset="img/content/map-desktop.jpg 1x, img/content/map-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/content/map-tablet.jpg 1x, img/content/map-tablet@2x.jpg 2x">
-          <img class="partnership__img" src="img/content/map-mobile.jpg" srcset="img/content/map-mobile@2x.jpg 2x"
-            width="320" height="362" alt="Карта проезда">
-        </picture>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5772969929692!2d30.322104109579023!3d59.93915601606891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sro!4v1608884298644!5m2!1sru!2sro"
+          width="320" height="362" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe>
       </div>
     </section>
 
@@ -203,28 +206,32 @@
           <ul class="contacts__social-list">
             <li class="contacts__social-item">
               <a class="contacts__social-link" href="#">
-                <img class="contacts__social-img social-img--vkontakte" src="img/icons/icon-vkontakte.svg" width="23"
-                  height="16" alt="Мы ВКонтакте">
+                <svg class="contacts__social-vkontakte" width="23" height="16">
+                  <use xlink:href="img/icons/sprite.svg#icon-vk"></use>
+                </svg>
               </a>
             </li>
             <li class="contacts__social-item">
               <a class="contacts__social-link" href="#">
-                <img class="contacts__social-img social-img--instagramm" src="img/icons/icon-instagram.svg" width="16"
-                  height="16" alt="Мы в Instagramm">
+                <svg class="contacts__social-instagramm" width="16" height="16">
+                  <use xlink:href="img/icons/sprite.svg#icon-insta"></use>
+                </svg>
               </a>
             </li>
             <li class="contacts__social-item">
               <a class="contacts__social-link" href="#">
-                <img class="contacts__social-img social-img--facebook" src="img/icons/icon-facebook.svg" width="22"
-                  height="22" alt="Мы в Facebook">
+                <svg class="contacts__social-facebook" width="22" height="22">
+                  <use xlink:href="img/icons/sprite.svg#icon-facebook"></use>
+                </svg>
               </a>
             </li>
           </ul>
           <div class="contacts__copyright">
             <p class="contacts__copyright-text">HTML Academy</p>
             <a class="contacts__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-              <img class="contacts__copyright-img" src="img/icons/htmlacademy-logo.svg" width="27" height="34"
-                alt="HTML Academy">
+              <svg width="27" height="34" viewBox="0 0 27 34">
+                <use xlink:href="img/icons/sprite.svg#icon-html"></use>
+              </svg>
             </a>
           </div>
         </div>
@@ -235,3 +242,5 @@
   <script src="js/mobile.js"></script>
 
 </body>
+
+</html>
