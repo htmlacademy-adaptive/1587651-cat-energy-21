@@ -44,20 +44,28 @@
     position: absolute;
   }
 
-  &:hover input {
-    border: 1px solid $grey-input-border;
+  &:hover {
+    input {
+      border: 1px solid $grey-input-border;
+    }
   }
 
-  &:focus-within input {
-    border: 2px solid $grey-text;
+  &:focus-within {
+    input {
+      border: 2px solid $grey-text;
+    }
   }
 
-  &:focus-within .owner-number-icon {
-    fill: $green;
+  &:focus-within {
+    .owner-number-icon {
+      fill: $green;
+    }
   }
 
-  &:focus-within .owner-email-icon {
-    stroke: $green;
+  &:focus-within {
+    .owner-email-icon {
+      stroke: $green;
+    }
   }
 
   input:invalid {

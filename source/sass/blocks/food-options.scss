@@ -92,7 +92,7 @@
     width: 24px;
     height: 12px;
     margin-left: 16px;
-    background-image: url("../../img/icons/arrow-icon.svg");
+    background-image: url("../img/icons/arrow-icon.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -102,7 +102,7 @@
   &:focus::after,
   &:active::after {
     width: 32px;
-    background-image: url("../../img/icons/arrow-icon-big.svg");
+    background-image: url("../img/icons/arrow-icon-big.svg");
   }
 
   &:active {

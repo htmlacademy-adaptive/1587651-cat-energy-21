@@ -14,12 +14,16 @@
     border: 1px solid $grey-input;
   }
 
-  &:hover input {
-    border: 1px solid $grey-input-border;
+  &:hover {
+    input {
+      border: 1px solid $grey-input-border;
+    }
   }
 
-  &:focus-within input {
+  &:focus-within {
+    input {
     border: 2px solid $grey-text;
+    }
   }
 
   input:invalid {

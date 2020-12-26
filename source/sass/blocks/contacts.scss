@@ -53,27 +53,34 @@
     stroke: $social;
   }
 
-  &:hover .contacts__social-vkontakte,
-  &:hover .contacts__social-instagramm,
-  &:focus .contacts__social-vkontakte,
-  &:focus .contacts__social-instagramm {
-    fill: $green;
+  &:hover,
+  &:focus {
+    .contacts__social-vkontakte,
+    .contacts__social-instagramm {
+      fill: $green;
+    }
   }
 
-  &:hover .contacts__social-facebook,
-  &:focus .contacts__social-facebook {
-    stroke: $green;
+  &:hover,
+  &:focus {
+    .contacts__social-facebook {
+      stroke: $green;
+    }
   }
 
-  &:active .contacts__social-vkontakte,
-  &:active .contacts__social-instagramm {
-    fill: $green;
-    opacity: 0.3;
+  &:active {
+    .contacts__social-vkontakte,
+    .contacts__social-instagramm {
+      fill: $green;
+      opacity: 0.3;
+    }
   }
 
-  &:active .contacts__social-facebook {
-    stroke: $green;
-    opacity: 0.3;
+  &:active {
+    .contacts__social-facebook {
+      stroke: $green;
+      opacity: 0.3;
+    }
   }
 }
 
@@ -101,14 +108,18 @@
     fill: $social;
   }
 
-  &:hover svg,
-  &:focus svg {
-    fill: $green;
+  &:hover,
+  &:focus {
+    svg {
+      fill: $green;
+    }
   }
 
-  &:active svg {
-    fill: $green;
-    opacity: 0.3;
+  &:active {
+    svg {
+      fill: $green;
+      opacity: 0.3;
+    }
   }
 }
 
