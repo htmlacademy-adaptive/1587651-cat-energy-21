@@ -51,23 +51,23 @@
       <form class="program-selection__form" action="https://echo.htmlacademy.ru/" method="GET">
         <div class="program-selection__container">
           <fieldset class="program-selection__item cat-info">
-            <div class="wrapper">
+            <div class="program-selection__container-wrapper wrapper">
               <div class="cat-info__item cat-info__name">
                 <label for="cat-name">Имя:*</label>
-                <input type="text" name="cat-name" id="cat-name" placeholder="Барсик">
+                <input class="cat-info__invalid" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
               </div>
               <div class="cat-info__item cat-info__weight">
                 <label for="cat-weight">Вес (кг):*</label>
-                <input type="text" name="cat-weight" id="cat-weight" placeholder="7">
+                <input class="cat-info__invalid" type="text" name="cat-weight" id="cat-weight" placeholder="7">
               </div>
               <div class="cat-info__item cat-info__age">
-                <label for="cat-age">Возраст (лет):*</label>
+                <label for="cat-age">Возраст (лет):</label>
                 <input type="text" name="cat-age" id="cat-age" placeholder="7">
               </div>
             </div>
           </fieldset>
           <fieldset class="program-selection__item program-options">
-            <div class="wrapper">
+            <div class="program-selection__container-wrapper wrapper">
               <ul class="program-options__list">
                 <li class="program-options__item">
                   <input class="program-options__input visually-hidden" type="radio" name="program-options" id="slim"
@@ -96,13 +96,13 @@
                 <label for="owner-email">E-mail:*</label>
                 <input class="owner-email-input" type="email" name="owner-email" id="owner-email"
                   placeholder="kuklachev@gmail.com">
-                <svg class="owner-email-icon" width="20" height="15">
+                <svg class="owner-contacts__email-icon" width="20" height="15">
                   <use xlink:href="img/icons/sprite.svg#icon-email"></use>
                 </svg>
               </div>
               <div class="owner-contacts__number">
                 <label for="owner-number">Телефон:*</label>
-                <svg class="owner-number-icon" width="20" height="21">
+                <svg class="owner-contacts__number-icon" width="20" height="21">
                   <use xlink:href="img/icons/sprite.svg#icon-phone"></use>
                 </svg>
                 <input type="tel" name="owner-number" id="owner-number" placeholder="8 (960) 900-60-90">
@@ -140,7 +140,7 @@
             </ul>
           </div>
         </fieldset>
-        <div class="wrapper">
+        <div class="program-selection__button-container wrapper">
           <button class="program-selection__button button" type="submit">Отправить заявку</button>
           <p class="program-selection__required">* — Обязательные поля</p>
         </div>
@@ -177,21 +177,21 @@
           <ul class="contacts__social-list">
             <li class="contacts__social-item">
               <a class="contacts__social-link" href="#">
-                <svg class="contacts__social-vkontakte" width="23" height="16">
+                <svg class="contacts__social-vkontakte" aria-label="Мы во Вконтакте" width="23" height="16">
                   <use xlink:href="img/icons/sprite.svg#icon-vkontakte"></use>
                 </svg>
               </a>
             </li>
             <li class="contacts__social-item">
               <a class="contacts__social-link" href="#">
-                <svg class="contacts__social-instagramm" width="16" height="16">
+                <svg class="contacts__social-instagramm" aria-label="Мы в Instagramm" width="16" height="16">
                   <use xlink:href="img/icons/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="contacts__social-item">
               <a class="contacts__social-link" href="#">
-                <svg class="contacts__social-facebook" width="22" height="22">
+                <svg class="contacts__social-facebook" aria-label="Мы в Facebook" width="22" height="22">
                   <use xlink:href="img/icons/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
@@ -200,7 +200,7 @@
           <div class="contacts__copyright">
             <p class="contacts__copyright-text">HTML Academy</p>
             <a class="contacts__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-              <svg width="27" height="34" viewBox="0 0 27 34">
+              <svg aria-label="HTML Academy" width="27" height="34" viewBox="0 0 27 34">
                 <use xlink:href="img/icons/sprite.svg#htmlacademy-logo"></use>
               </svg>
             </a>
@@ -210,7 +210,7 @@
     </section>
   </footer>
 
-  <script src="js/mobile.min.js"></script>
+  <script src="js/script.min.js"></script>
 
 </body>
 

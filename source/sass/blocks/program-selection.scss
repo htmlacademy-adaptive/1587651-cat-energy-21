@@ -129,6 +129,11 @@
     width: 295px;
   }
 
+  .program-selection__button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .program-selection__button {
     width: 282px;
     margin-left: 39px;
@@ -141,7 +146,6 @@
     margin-right: 145px;
     font-size: 16px;
     line-height: 16px;
-    float: right;
   }
 }
 
@@ -157,7 +161,7 @@
     margin: 0 auto;
     padding: 0 110px;
 
-    .wrapper {
+    .program-selection__container-wrapper {
       margin: 0;
       padding: 0;
       width: auto;

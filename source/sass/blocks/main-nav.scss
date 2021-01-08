@@ -5,13 +5,17 @@
 .main-nav__burger {
   position: absolute;
   display: block;
-  top: -12px;
-  right: 0;
+  top: -31px;
+  right: 19px;
   width: 24px;
   height: 16px;
   background-color: $white;
   border: none;
   cursor: pointer;
+}
+
+.main-nav--nojs .main-nav__burger {
+  display: none;
 }
 
 .main-nav--closed .main-nav__burger {
@@ -49,11 +53,7 @@
 }
 
 .main-nav__list {
-  position: absolute;
-  top: 33px;
-  left: -300px;
-  width: 320px;
-  margin: 0;
+  margin: 12px 0;
   padding: 0;
   font-family: $oswald;
   font-weight: 500;
@@ -73,6 +73,10 @@
   padding: 22px 0 23px;
   text-align: center;
   border-top: 1px solid $grey-menu-border;
+
+  &:last-child {
+    border-bottom: 1px solid $grey-menu-border;
+  }
 
   &:hover,
   &:focus {
@@ -99,15 +103,19 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 440px;
-    margin-top: 6px;
+    padding-top: 2px;
+    margin: 0;
+    margin-top: 17px;
     font-size: 18px;
     line-height: 24px;
     font-weight: normal;
   }
 
-  .main-nav__item {
-    border-top: none;
+  .main-nav__item,
+  .main-nav__item:last-child {
+    border: none;
   }
+
 
   .main-nav__item--active {
     .main-nav__link {
@@ -120,7 +128,7 @@
 @media (min-width: $desktop) {
   .main-nav__list {
     width: 478px;
-    margin-top: 28px;
+    margin-top: 46px;
     font-size: 20px;
     line-height: 30px;
   }

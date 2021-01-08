@@ -33,6 +33,16 @@
 
 .partnership__img-container {
   background-color: #f2f2f2;
+
+  iframe {
+    background-image: url("../img/content/map.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/content/map@2x.jpg");
+    }
+  }
 }
 
 @media (min-width: $tablet) {
@@ -67,6 +77,13 @@
     iframe {
       width: 768px;
       height: 400px;
+      background-image: url("../img/content/map-tablet.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/content/map-tablet@2x.jpg");
+      }
     }
   }
 }
@@ -108,6 +125,13 @@
       position: absolute;
       top: 0;
       width: 100%;
+      background-image: url("../img/content/map-desktop.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/content/map-desktop@2x.jpg");
+      }
       z-index: -2;
     }
   }
