@@ -67,6 +67,10 @@
 
 .main-nav__list--closed {
   display: none;
+
+  .main-nav--nojs & {
+    display: block;
+  }
 }
 
 .main-nav__item {

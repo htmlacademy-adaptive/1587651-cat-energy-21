@@ -67,14 +67,14 @@
 
   input:invalid {
     border: 2px solid $error;
-  }
 
-  input:invalid + .owner-contacts__number-icon {
-    fill: $error;
-  }
+    & + .owner-contacts__number-icon {
+      fill: $error;
+    }
 
-  input:invalid + .owner-contacts__email-icon {
-    stroke: $error;
+    & + .owner-contacts__email-icon {
+      stroke: $error;
+    }
   }
 }
 

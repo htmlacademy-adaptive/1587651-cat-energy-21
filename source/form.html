@@ -23,7 +23,7 @@
       <img class="page-header__logo-text" src="img/icons/logo-text.svg" width="101" height="18" alt="Cat Energy">
     </a>
 
-    <nav class="main-nav main-nav--closed">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__burger" type="button" aria-label="Открыть меню"></button>
       <ul class="main-nav__list main-nav__list--closed">
         <li class="main-nav__item">
@@ -54,11 +54,12 @@
             <div class="program-selection__container-wrapper wrapper">
               <div class="cat-info__item cat-info__name">
                 <label for="cat-name">Имя:*</label>
-                <input class="cat-info__invalid" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
+                <input class="cat-info__invalid" type="text" name="cat-name" id="cat-name" placeholder="Барсик"
+                  required>
               </div>
               <div class="cat-info__item cat-info__weight">
                 <label for="cat-weight">Вес (кг):*</label>
-                <input class="cat-info__invalid" type="text" name="cat-weight" id="cat-weight" placeholder="7">
+                <input class="cat-info__invalid" type="text" name="cat-weight" id="cat-weight" placeholder="7" required>
               </div>
               <div class="cat-info__item cat-info__age">
                 <label for="cat-age">Возраст (лет):</label>
@@ -95,17 +96,17 @@
               <div class="owner-contacts__email">
                 <label for="owner-email">E-mail:*</label>
                 <input class="owner-email-input" type="email" name="owner-email" id="owner-email"
-                  placeholder="kuklachev@gmail.com">
+                  placeholder="kuklachev@gmail.com" required>
                 <svg class="owner-contacts__email-icon" width="20" height="15">
                   <use xlink:href="img/icons/sprite.svg#icon-email"></use>
                 </svg>
               </div>
               <div class="owner-contacts__number">
                 <label for="owner-number">Телефон:*</label>
+                <input type="tel" name="owner-number" id="owner-number" placeholder="8 (960) 900-60-90" required>
                 <svg class="owner-contacts__number-icon" width="20" height="21">
                   <use xlink:href="img/icons/sprite.svg#icon-phone"></use>
                 </svg>
-                <input type="tel" name="owner-number" id="owner-number" placeholder="8 (960) 900-60-90">
               </div>
             </div>
           </div>
@@ -176,22 +177,22 @@
           </a>
           <ul class="contacts__social-list">
             <li class="contacts__social-item">
-              <a class="contacts__social-link" href="#">
-                <svg class="contacts__social-vkontakte" aria-label="Мы во Вконтакте" width="23" height="16">
+              <a class="contacts__social-link" href="#" aria-label="Мы во Вконтакте">
+                <svg class="contacts__social-vkontakte" width="23" height="16">
                   <use xlink:href="img/icons/sprite.svg#icon-vkontakte"></use>
                 </svg>
               </a>
             </li>
             <li class="contacts__social-item">
-              <a class="contacts__social-link" href="#">
-                <svg class="contacts__social-instagramm" aria-label="Мы в Instagramm" width="16" height="16">
+              <a class="contacts__social-link" href="#" aria-label="Мы в Instagramm">
+                <svg class="contacts__social-instagramm" width="16" height="16">
                   <use xlink:href="img/icons/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="contacts__social-item">
-              <a class="contacts__social-link" href="#">
-                <svg class="contacts__social-facebook" aria-label="Мы в Facebook" width="22" height="22">
+              <a class="contacts__social-link" href="#" aria-label="Мы в Facebook">
+                <svg class="contacts__social-facebook" width="22" height="22">
                   <use xlink:href="img/icons/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
@@ -199,8 +200,9 @@
           </ul>
           <div class="contacts__copyright">
             <p class="contacts__copyright-text">HTML Academy</p>
-            <a class="contacts__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-              <svg aria-label="HTML Academy" width="27" height="34" viewBox="0 0 27 34">
+            <a class="contacts__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive"
+              aria-label="HTML Academy" target="_blank">
+              <svg width="27" height="34" viewBox="0 0 27 34">
                 <use xlink:href="img/icons/sprite.svg#htmlacademy-logo"></use>
               </svg>
             </a>
