@@ -21,6 +21,7 @@ const styles = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
+    .pipe(gulp.dest("build/css"))
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -46,9 +47,9 @@ exports.html = html;
 // Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/mobile.js")
+  return gulp.src("source/js/script.js")
     .pipe(uglify())
-    .pipe(rename("mobile.min.js"))
+    .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }

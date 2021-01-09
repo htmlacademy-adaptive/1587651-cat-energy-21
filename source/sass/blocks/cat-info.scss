@@ -10,7 +10,8 @@
 
   input {
     width: 100%;
-    padding: 10px 15px;
+    height: 46px;
+    padding: 0 15px;
     border: 1px solid $grey-input;
   }
 
@@ -26,7 +27,7 @@
     }
   }
 
-  input:invalid {
+  .cat-info__invalid:invalid {
     border: 2px solid $error;
   }
 }
@@ -45,7 +46,7 @@
 
 .cat-info__age {
   label {
-    margin-right: 10px;
+    margin-right: 16px;
   }
 }
 
@@ -56,12 +57,13 @@
 
   .cat-info__item {
     margin-left: 42px;
-    margin-bottom: 18px;
+    margin-bottom: 19px;
     padding-right: 36px;
 
     input {
+      height: 52px;
       margin-top: 1px;
-      padding: 14px 19px 13px;
+      padding: 0 19px;
     }
   }
 
@@ -73,13 +75,13 @@
 
   .cat-info__weight {
     label {
-      margin-right: 18px;
+      margin-right: 20px;
     }
   }
 
   .cat-info__age {
     label {
-      margin-right: 8px;
+      margin-right: 17px;
     }
   }
 }
@@ -94,9 +96,15 @@
     padding-right: 38px;
   }
 
+  .cat-info__weight {
+    label {
+      margin-right: 18px;
+    }
+  }
+
   .cat-info__age {
     label {
-      margin-right: 7px;
+      margin-right: 14px;
     }
   }
 }

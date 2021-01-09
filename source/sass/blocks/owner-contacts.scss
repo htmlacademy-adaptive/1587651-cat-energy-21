@@ -16,12 +16,12 @@
   }
 }
 
-.owner-email-icon {
+.owner-contacts__email-icon {
   fill: transparent;
   stroke: $grey-title;
 }
 
-.owner-number-icon {
+.owner-contacts__number-icon {
   fill: $grey-title;
 }
 
@@ -35,8 +35,9 @@
 
   input {
     width: 100%;
+    height: 46px;
     margin-top: 6px;
-    padding: 10px 15px;
+    padding: 0 15px;
     border: 1px solid $grey-input;
   }
 
@@ -55,25 +56,25 @@
       border: 2px solid $grey-text;
     }
 
-    .owner-number-icon {
+    .owner-contacts__number-icon {
       fill: $green;
     }
 
-    .owner-email-icon {
+    .owner-contacts__email-icon {
       stroke: $green;
     }
   }
 
   input:invalid {
     border: 2px solid $error;
-  }
 
-  input:invalid + .owner-number-icon {
-    fill: $error;
-  }
+    & + .owner-contacts__number-icon {
+      fill: $error;
+    }
 
-  input:invalid + .owner-email-icon {
-    stroke: $error;
+    & + .owner-contacts__email-icon {
+      stroke: $error;
+    }
   }
 }
 
@@ -115,7 +116,8 @@
     padding-right: 35px;
 
     input {
-      padding: 14px 19px 12px;
+      height: 52px;
+      padding: 0 19px;
     }
   }
 

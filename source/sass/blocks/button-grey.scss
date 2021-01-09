@@ -1,0 +1,18 @@
+.button-grey {
+  font-family: $oswald;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: $grey-text;
+  background-color: $grey-blocks-background;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $grey-stripes;
+  }
+
+  &:active {
+    background-color: $grey-stripes;
+    color: $grey-text-opacity;
+  }
+}
